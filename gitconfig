@@ -1,0 +1,28 @@
+[user]
+	email = julen.pardo@outlook.es
+	name = Julen Pardo
+[alias]
+    c = commit --verbose
+    cm = commit -m
+    a = add
+    ap = add -p
+    co = checkout
+    ps = push -u origin
+    pl = pull
+    d = diff
+    r = reset
+    rh = reset --hard
+    d = diff
+    s = status
+    ss = status --short
+    sv = status --verbose
+
+    graph = log --graph --oneline --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --date=short
+
+    # Inspired by http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+    # with little modifications
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --date=short
+
+[core]
+	editor = vim

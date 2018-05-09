@@ -1,0 +1,9 @@
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/julenpardo/prezto
+[submodule "vimrc"]
+	path = vimrc
+	url = https://github.com/julenpardo/vimrc
+[submodule "tmux-config"]
+	path = tmux-config
+	url = https://github.com/julenpardo/tmux-config
