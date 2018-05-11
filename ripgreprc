@@ -1,0 +1,14 @@
+# Colors
+--colors=path:fg:cyan
+--colors=path:style:bold
+--colors=line:style:bold
+
+# Case insensitive
+--ignore-case
+
+# Avoid long lines
+--max-columns=150
+
+# File types
+--type-add
+web:*.{html,twig,css,js}*

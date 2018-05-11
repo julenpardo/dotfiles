@@ -1,7 +1,7 @@
 clear Lock
 
 ! Tilde/grave (English keyboard)
-keycode 49 = grave dead_tilde
+keycode 49 = dead_tilde dead_diaeresis
 ! Caps lock
 keycode 66 = dead_acute grave
 ! Greater/lower (German/Spanish keyboard next to left shift)
