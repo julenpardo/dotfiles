@@ -4,6 +4,8 @@
 [alias]
     c = commit --verbose
     cm = commit -m
+    l = log
+    b = branch
     a = add
     ap = add -p
     co = checkout
