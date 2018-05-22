@@ -1,9 +1,9 @@
 clear Lock
 
 ! Tilde/grave (English keyboard)
-keycode 49 = dead_tilde dead_diaeresis
+keycode 49 = grave dead_tilde
 ! Caps lock
-keycode 66 = dead_acute grave
+keycode 66 = dead_acute dead_diaeresis
 ! Greater/lower (German/Spanish keyboard next to left shift)
 keycode 94 = questiondown exclamdown
 
