@@ -1,0 +1,89 @@
+#
+# Defines aliases.
+#
+# Authors:
+#   Julen Pardo <julen.pardo@outlook.es>
+#
+# Some aliases are taken from https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
+#
+
+# Apt
+alias apt-up='sudo apt-get update'
+alias apt-in='sudo apt-get update && sudo apt-get install -y'
+alias apt-re='sudo apt-get remove'
+alias apt-se='sudo apt-cache search'
+
+# Files, directories, etc.
+alias mkdir='mkdir -pv'
+alias md='mkdir -pv'
+alias t='tail -f'
+alias ln='ln -s'
+alias jsonf='python -m json.tool'
+alias lll='ls -al'
+alias cgit='cd ~/git'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias back='cd $OLDPWD'
+# For bd: https://github.com/vigneshwaranr/bd
+alias bd='. bd -si'
+
+# Compression
+alias tar='tar -cvf'
+alias targz='\tar cvzf'
+alias tarbz2='\tar cvfj'
+alias untar='\tar -xvf'
+alias untargz='\tar -zxvf'
+alias untarbz2='\tar -jxvf'
+alias tarls='\tar -tvf'
+alias taradd='\tar -rvf'
+
+# Git
+alias g='git'
+alias gs='git status'
+alias gbc='git rev-parse --abbrev-ref HEAD'
+alias gps='git push origin -u'
+alias gpsc='git push origin -u $(gbc)'
+alias gpl='git pull'
+alias gd='git diff'
+alias gco='git checkout'
+alias gb='git branch'
+alias gls='git ls'
+alias gll='git ll'
+alias ga='git add'
+alias gap='git add -p'
+alias gc='git commit --verbose'
+alias gcm='git commit -m'
+alias gcam='git commit --amend'
+alias gsq='git rebase -i'
+
+# Docker
+alias di='docker images'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias drmi='docker rmi'
+alias drmin='docker rmi -f $(docker images -q -f "dangling=true")'
+alias drm='docker rm -f'
+alias drma='docker rm -f $(docker ps -aq)'
+
+# Ansible
+alias ap='ansible-playbook'
+alias aph='ansible-playbook -i hosts'
+
+# Network
+alias ping='ping -c 4'
+
+# Disk
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+
+# Find
+alias fif='find -type f -name'
+alias fid='find -type d -name'
+
+# Misc
+alias c='clear'
+alias tmuxx='unset TMUX && tmux'
+alias zshreload='source ~/.zshrc'
+# From https://www.quora.com/What-are-some-bash-aliases-that-you-use-often/answer/Jitesh-Kamble
+alias xc='xclip -selection clipboard -i'
+alias clipboard='xclip -selection "clipboard" -o'

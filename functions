@@ -1,0 +1,74 @@
+#
+# Defines functions.
+#
+# Authors:
+#   Julen Pardo <julen.pardo@outlook.es>
+#
+
+#
+# Crypto
+#
+
+function sha1() {
+    if [[ -f $1 ]]; then
+        sha1sum $1 | sed -e "s/$1/$1 (file)/g"
+    else
+        checksum=$(echo -n $1 | openssl sha1 | sed -e "s/(stdin)= //")
+        echo "$checksum  \"$1\" (string)"
+    fi
+}
+
+function sha256() {
+    if [[ -f $1 ]]; then
+        sha256sum $1 | sed -e "s/$1/$1 (file)/g"
+    else
+        checksum=$(echo -n $1 | openssl sha256 | sed -e "s/(stdin)= //")
+        echo "$checksum  \"$1\" (string)"
+    fi
+}
+
+function sha512() {
+    if [[ -f $1 ]]; then
+        sha512sum $1 | sed -e "s/$1/$1 (file)/g"
+    else
+        checksum=$(echo -n $1 | openssl sha512 | sed -e "s/(stdin)= //")
+        echo "$checksum  \"$1\" (string)"
+    fi
+}
+
+#
+# Docker
+#
+
+function dbash() {
+    docker exec -it $1 /bin/bash
+}
+
+#
+# Files
+#
+
+# Counts the files.
+function files() {
+    ls $1 | wc -l
+}
+
+#
+# Hardware
+#
+
+# https://stackoverflow.com/a/9229580/4055389
+function cpu() {
+    grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print "CPU load: " usage "%"}'
+    #grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage "%"}'
+}
+
+# https://unix.stackexchange.com/a/119170/173034
+function disk() {
+    df -h | awk '$NF=="/"{printf "Disk Usage: %d/%dGB (%s)\n", $3,$2,$5}'
+}
+
+# https://unix.stackexchange.com/a/119170/173034J
+function ram() {
+    free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }'
+}
