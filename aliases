@@ -8,10 +8,10 @@
 #
 
 # Apt
-alias apt-up='sudo apt-get update'
-alias apt-in='sudo apt-get update && sudo apt-get install -y'
-alias apt-re='sudo apt-get remove'
-alias apt-se='sudo apt-cache search'
+alias aptup='sudo apt-get update'
+alias aptin='sudo apt-get update && sudo apt-get install -y'
+alias aptrm='sudo apt-get remove'
+alias aptse='sudo apt-cache search'
 
 # Files, directories, etc.
 alias mkdir='mkdir -pv'
@@ -41,8 +41,8 @@ alias taradd='\tar -rvf'
 alias g='git'
 alias gs='git status'
 alias gbc='git rev-parse --abbrev-ref HEAD'
-alias gps='git push origin -u'
-alias gpsc='git push origin -u $(gbc)'
+alias gps='git push origin -u $(gbc)'
+alias gpsb='git push origin -u'
 alias gpl='git pull'
 alias gd='git diff'
 alias gco='git checkout'
@@ -50,6 +50,7 @@ alias gb='git branch'
 alias gls='git ls'
 alias gll='git ll'
 alias ga='git add'
+alias gaa='git add --all'
 alias gap='git add -p'
 alias gc='git commit --verbose'
 alias gcm='git commit -m'
