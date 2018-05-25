@@ -56,6 +56,8 @@ alias gc='git commit --verbose'
 alias gcm='git commit -m'
 alias gcam='git commit --amend'
 alias gsq='git rebase -i'
+alias grh='git reset --hard'
+alias gm='git merge --no-ff'
 
 # Docker
 alias di='docker images'
@@ -65,10 +67,13 @@ alias drmi='docker rmi'
 alias drmin='docker rmi -f $(docker images -q -f "dangling=true")'
 alias drm='docker rm -f'
 alias drma='docker rm -f $(docker ps -aq)'
+alias drun='docker run --name'
+alias dstp='docker stop'
+alias dstr='docker start'
 
 # Ansible
-alias ap='ansible-playbook'
-alias aph='ansible-playbook -i hosts'
+alias ap='ansible-playbook -i hosts'
+alias apl='ap -l'
 
 # Network
 alias ping='ping -c 4'
@@ -82,6 +87,7 @@ alias fif='find -type f -name'
 alias fid='find -type d -name'
 
 # Misc
+alias s='sudo'
 alias c='clear'
 alias tmuxx='unset TMUX && tmux'
 alias zshreload='source ~/.zshrc'

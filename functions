@@ -40,7 +40,7 @@ function sha512() {
 # Docker
 #
 
-function dbash() {
+function dsh() {
     docker exec -it $1 /bin/bash
 }
 
@@ -57,18 +57,7 @@ function files() {
 # Hardware
 #
 
-# https://stackoverflow.com/a/9229580/4055389
-function cpu() {
-    grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print "CPU load: " usage "%"}'
-    #grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage "%"}'
-}
-
 # https://unix.stackexchange.com/a/119170/173034
 function disk() {
     df -h | awk '$NF=="/"{printf "Disk Usage: %d/%dGB (%s)\n", $3,$2,$5}'
-}
-
-# https://unix.stackexchange.com/a/119170/173034J
-function ram() {
-    free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }'
 }
