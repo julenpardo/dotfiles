@@ -2,3 +2,6 @@
 Session.vim
 .sw[a-p]
 .*.sw[a-p]
+
+### Python ###
+.envrc
