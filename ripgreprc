@@ -3,6 +3,15 @@
 --colors=path:style:bold
 --colors=line:style:bold
 
+ # Follow symbolic links
+--follow
+
+# Hidden files and directories
+--hidden
+
+# Don't search within .git directory
+--glob=!.git/*
+
 # Case insensitive
 --ignore-case
 
