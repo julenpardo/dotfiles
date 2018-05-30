@@ -12,6 +12,10 @@ installation instructions.
 ## Tmux plugins
 
 * [tpm](https://github.com/tmux-plugins/tpm): tmux plugin manager.
+* [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect): persist tmux
+  environment (including processes).
+* [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum/): continuous
+  saving of tmux environment (depends on tmux-resurrect).
 * [tmux-yank](https://github.com/tmux-plugins/tmux-yank): copy to system clipboard.
 * [tmux-mem-cpu-load](https://github.com/thewtex/tmux-mem-cpu-load): show memory
   and cpu load.

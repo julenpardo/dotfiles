@@ -3,9 +3,6 @@
 --colors=path:style:bold
 --colors=line:style:bold
 
- # Follow symbolic links
---follow
-
 # Hidden files and directories
 --hidden
 

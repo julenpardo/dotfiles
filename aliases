@@ -17,15 +17,17 @@ alias aptse='sudo apt-cache search'
 alias mkdir='mkdir -pv'
 alias md='mkdir -pv'
 alias t='tail -f'
-alias ln='ln -s'
 alias jsonf='python -m json.tool'
-alias lll='ls -al'
 alias cgit='cd ~/git'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias back='cd $OLDPWD'
 # For bd: https://github.com/vigneshwaranr/bd
 alias bd='. bd -si'
+
+# Aliases for 'k' (installed with zplug)
+alias l='k'
+alias ll='k -a'
 
 # Compression
 alias tar='tar -cvf'
