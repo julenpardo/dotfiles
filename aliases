@@ -18,7 +18,6 @@ alias mkdir='mkdir -pv'
 alias md='mkdir -pv'
 alias t='tail -f'
 alias jsonf='python -m json.tool'
-alias cgit='cd ~/git'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias back='cd $OLDPWD'
@@ -28,6 +27,10 @@ alias bd='. bd -si'
 # Aliases for 'k' (installed with zplug)
 alias l='k'
 alias ll='k -a'
+
+# Vim
+alias vims='vim -S'
+alias svim='sudo vim'
 
 # Compression
 alias tar='tar -cvf'
