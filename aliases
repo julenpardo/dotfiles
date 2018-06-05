@@ -26,8 +26,10 @@ alias back='cd $OLDPWD'
 alias bd='. bd -si'
 
 # Aliases for 'k' (installed with zplug)
-alias l='k'
-alias ll='k -a'
+alias l='k --human'
+alias ll='k --all --human'
+alias k='k --human'
+alias kk='\k --all --human'
 
 # Compression
 alias tar='tar -cvf'
