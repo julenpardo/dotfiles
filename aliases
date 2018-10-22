@@ -21,14 +21,12 @@ alias jsonf='python -m json.tool'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias back='cd $OLDPWD'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 # For bd: https://github.com/vigneshwaranr/bd
 alias bd='. bd -si'
-
-# Aliases for 'k' (installed with zplug)
-alias l='k --human'
-alias ll='k --all --human'
-alias k='k --human'
-alias kk='\k --all --human'
 
 # Vim
 alias vims='vim -S'

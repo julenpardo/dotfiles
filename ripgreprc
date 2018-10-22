@@ -13,7 +13,7 @@
 --ignore-case
 
 # Avoid long lines
---max-columns=150
+--max-columns=200
 
 # File types
 --type-add
