@@ -75,6 +75,12 @@ alias drma='docker rm -f $(docker ps -aq)'
 alias drun='docker run --name'
 alias dstp='docker stop'
 alias dstr='docker start'
+alias dlog='docker logs -f'
+alias dbl='docker build -t'
+
+# Permissions
+alias modrx='sudo chmod +rx'
+alias ownme='sudo chown $(whoami):'
 
 # Ansible
 alias ap='ansible-playbook -i hosts'
@@ -82,6 +88,7 @@ alias apl='ap -l'
 
 # Network
 alias ping='ping -c 4'
+alias ports='netstat -tulpn'
 
 # Disk
 alias dud='du -d 1 -h'
@@ -92,6 +99,7 @@ alias fif='find -type f -name'
 alias fid='find -type d -name'
 
 # Misc
+alias psaux='ps aux | grep'
 alias s='sudo'
 alias c='clear'
 alias tmuxx='unset TMUX && tmux'
