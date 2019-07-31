@@ -33,7 +33,7 @@ alias vims='vim -S'
 alias svim='sudo vim'
 
 # Compression
-alias tar='tar -cvf'
+#alias tar='tar -cvf'
 alias targz='\tar cvzf'
 alias tarbz2='\tar cvfj'
 alias untar='\tar -xvf'
@@ -70,16 +70,20 @@ alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias drmi='docker rmi'
 alias drmin='docker rmi -f $(docker images -q -f "dangling=true")'
-alias drm='docker rm -f'
-alias drma='docker rm -f $(docker ps -aq)'
+alias drm='docker rm'
+alias drma='docker rm $(docker ps -aq)'
+alias drmaf='docker rm -f $(docker ps -aq)'
 alias drun='docker run --name'
 alias dstp='docker stop'
 alias dstr='docker start'
 alias dlog='docker logs -f'
 alias dbl='docker build -t'
+alias dins='docker inspect'
+alias dex='docker exec'
+alias dcomp='docker-compose'
 
 # Permissions
-alias modrx='sudo chmod +rx'
+alias rx='sudo chmod +rx'
 alias ownme='sudo chown $(whoami):'
 
 # Ansible
@@ -107,3 +111,5 @@ alias zshreload='source ~/.zshrc'
 # From https://www.quora.com/What-are-some-bash-aliases-that-you-use-often/answer/Jitesh-Kamble
 alias xc='xclip -selection clipboard -i'
 alias clipboard='xclip -selection "clipboard" -o'
+alias beep='paplay $BEEP'
+alias p3='python3'
